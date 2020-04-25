@@ -8,6 +8,7 @@
   position: relative;
   padding-bottom: 66.666%;
   background: #eee;
+  border-style: solid;
 
   @nest & img {
     position: absolute;
@@ -20,6 +21,8 @@
 }
 
 .title {
+  color: white;
+  text-shadow: 2px 2px 2px black;
   @media (hover: hover) {
     @nest .root:hover & {
       text-decoration: underline;

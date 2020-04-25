@@ -19,7 +19,7 @@
 }
 
 .branding {
-  font-size: inherit;
+  font-size: 3em;
   margin: 0;
   flex: 1;
 
@@ -28,6 +28,12 @@
     padding: 0.5em;
     color: inherit;
     text-decoration: none;
+    margin-bottom: var(--unit);
+    margin-right: var(--unit);
+    margin-left: 0;
+    margin-top: 0;
+    background-color: white;
+    border-style: solid;
 
     @media (hover: hover) {
       @nest &:hover {
@@ -61,12 +67,18 @@
   @nest & ul {
     margin: 0;
     padding: 0;
+    margin-bottom: var(--unit);
+    margin-right: var(--unit);
+    margin-left: 0;
+    margin-top: 0;
+    border-style: solid;
   }
 
   @nest & ul li a {
     display: block;
     color: inherit;
     text-decoration: none;
+    background-color: white;
   }
 
   @media (hover: hover) {
@@ -109,4 +121,5 @@
 
 .showNav {
   display: block;
+
 }

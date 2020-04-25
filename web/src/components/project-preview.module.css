@@ -6,12 +6,15 @@
 
 .title {
   composes: responsiveTitle1 from './typography.module.css';
+  color: white;
+  text-shadow: 2px 2px 2px black;
 }
 
 .leadMediaThumb {
   position: relative;
   padding-bottom: 66.666%;
   background: #eee;
+  border-style: solid;
 
   @nest & img {
     position: absolute;

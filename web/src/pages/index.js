@@ -7,6 +7,11 @@ import GraphQLErrorList from '../components/graphql-error-list'
 import ProjectPreviewGrid from '../components/project-preview-grid'
 import SEO from '../components/seo'
 import Layout from '../containers/layout'
+import "../styles/global.css"
+
+function Intro () {
+  return <p className="intro">This is a small web shop, we sell things we make for ourselves. You can buy what we have MADE, or you can show interest by funding what we're MAKING.</p>
+}
 
 export const query = graphql`
   query IndexPageQuery {
@@ -118,23 +123,25 @@ const IndexPage = props => {
     <Layout>
       <SEO title={site.title} description={site.description} keywords={site.keywords} />
       <Container>
+        <Intro />
         <h1 hidden>Welcome to {site.title}</h1>
         {projectNodes && (
           <ProjectPreviewGrid
-            title='Latest projects'
+            title='MADE'
             nodes={projectNodes}
             browseMoreHref='/projects/'
           />
         )}
         {postNodes && (
           <BlogPostPreviewGrid
-            title='Latest blog posts'
+            title='MAKING'
             nodes={postNodes}
             browseMoreHref='/blog/'
           />
         )}
       </Container>
     </Layout>
+
   )
 }
 
